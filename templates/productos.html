@@ -15,8 +15,6 @@
         <button class="btn btn-primary">Guardar</button>
     </div>
 </form>
-<form id="frmProducto" method="post">
-    <div class="mb-1">
 <div class="table-responsive">
     <table class="table table-sm">
         <thead class="table-active">
@@ -28,17 +26,7 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody>
-            {% for producto in productos %}
-            <tr>
-                <td>{{ producto.Id_Producto }}</td>
-                <td>{{ producto.Nombre_Producto }}</td>
-                <td>{{ producto.Precio }}</td>
-                <td>{{ producto.Existencias }}</td>
-                <td><button class="btn btn-info btn-ingredientes" data-id="{{ producto.Id_Producto }}">Ver ingredientes...</button></td>
-            </tr>
-            {% endfor %}
-        </tbody>
+        <tbody id="tbodyProductos"></tbody>
     </table>
 </div>
 
